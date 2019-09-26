@@ -26,10 +26,16 @@ window.onload = function () {
 	var B_Tweet = "Tweet.png";						//game.htmlからの相対パス
 	game.preload([B_Tweet]);					//データを読み込んでおく		
 
+
 	//読み込み終わり
 	/////////////////////////////////////////////////
-
-
+	var B_Field = "field.jpg";	
+	game.preload([B_Field]);	
+	var bg = function( scene ) {
+		field = new Sprite( 400, 500 );
+		field.image = game.assets[B_Field];
+		scene.addChild( field );
+	}
 	game.onload = function () {					//ロードが終わった後にこの関数が呼び出されるので、この関数内にゲームのプログラムを書こう
 
 		/////////////////////////////////////////////////
@@ -40,12 +46,12 @@ window.onload = function () {
 
 		//グローバル変数終わり
 		/////////////////////////////////////////////////
-
-
-
+	
 		var S_MAIN = new Scene();					//シーン作成
+		bg(S_MAIN);
 		game.pushScene(S_MAIN);  					//S_MAINシーンオブジェクトを画面に設置
-		S_MAIN.backgroundColor = "black"; 			//S_MAINシーンの背景は黒くした
+
+		//S_MAIN.backgroundColor = "red"; //"black"; 			//S_MAINシーンの背景は黒くした
 
 		//ポイント表示テキスト
 		var S_Text = new Label(); 					//テキストはLabelクラス
