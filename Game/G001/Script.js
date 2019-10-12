@@ -189,7 +189,7 @@ window.onload = function () {
 					Animal.image = game.assets[AnimalImg4];  
 					State=9;
 					break;
-				case 4:
+				case 5:
 					Animal.image = game.assets[AnimalImg5];
 					State=9;
 					break;
