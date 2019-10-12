@@ -1,0 +1,13 @@
+		var arr = [1,2,3,4,5,6];
+		var a = arr.length;
+
+		//シャッフルアルゴリズム
+		while (a) {
+			var j = Math.floor( Math.random() * a );
+			var t = arr[--a];
+			arr[a] = arr[j];
+			arr[j] = t;
+		}
+
+		//シャッフルされた配列の要素を順番に表示する
+		arr.forEach( function( value ) {console.log( value )} );
